@@ -9,104 +9,48 @@
   "plugins": [
     {
       "name": "ruby-lsp",
+      "version": "1.0.0",
+      "source": "./ruby-lsp",
       "description": "Ruby LSP for Claude Code — code intelligence, diagnostics, and navigation for Ruby files",
-      "lspServers": {
-        "ruby": {
-          "command": "ruby-lsp",
-          "args": [],
-          "extensionToLanguage": {
-            ".rb": "ruby",
-            ".rbw": "ruby",
-            ".rake": "ruby",
-            ".gemspec": "ruby"
-          },
-          "transport": "stdio",
-          "initializationOptions": {},
-          "settings": {},
-          "startupTimeout": 60000,
-          "shutdownTimeout": 15000,
-          "maxRestarts": 3
-        }
-      }
+      "category": "development",
+      "tags": ["ruby", "lsp", "rails", "diagnostics", "navigation"],
+      "author": { "name": "Shopify" }
     },
     {
       "name": "herb-lsp",
+      "version": "1.0.0",
+      "source": "./herb-lsp",
       "description": "Herb Language Server for Claude Code — ERB template intelligence, diagnostics, and navigation",
-      "lspServers": {
-        "eruby": {
-          "command": "herb-language-server",
-          "args": ["--stdio"],
-          "extensionToLanguage": {
-            ".erb": "eruby"
-          },
-          "transport": "stdio",
-          "initializationOptions": {},
-          "settings": {},
-          "startupTimeout": 60000,
-          "shutdownTimeout": 15000,
-          "maxRestarts": 3
-        }
-      }
+      "category": "development",
+      "tags": ["erb", "html", "rails", "views", "templates", "herb"],
+      "author": { "name": "marcoroth" }
     },
     {
       "name": "rubocop-lsp",
+      "version": "1.0.0",
+      "source": "./rubocop-lsp",
       "description": "RuboCop LSP for Claude Code — Ruby linting diagnostics and auto-correction",
-      "lspServers": {
-        "ruby": {
-          "command": "rubocop",
-          "args": ["--lsp"],
-          "extensionToLanguage": {
-            ".rb": "ruby"
-          },
-          "transport": "stdio",
-          "initializationOptions": {},
-          "settings": {},
-          "startupTimeout": 60000,
-          "shutdownTimeout": 15000,
-          "maxRestarts": 3
-        }
-      }
+      "category": "development",
+      "tags": ["ruby", "lsp", "rubocop", "linting", "diagnostics", "formatting"],
+      "author": { "name": "rubocop" }
     },
     {
       "name": "stimulus-lsp",
+      "version": "1.0.0",
+      "source": "./stimulus-lsp",
       "description": "Stimulus LSP for Claude Code — Hotwire Stimulus controller intelligence for HTML and ERB",
-      "lspServers": {
-        "html": {
-          "command": "stimulus-language-server",
-          "args": ["--stdio"],
-          "extensionToLanguage": {
-            ".html": "html",
-            ".erb": "html"
-          },
-          "transport": "stdio",
-          "initializationOptions": {},
-          "settings": {},
-          "startupTimeout": 60000,
-          "shutdownTimeout": 15000,
-          "maxRestarts": 3
-        }
-      }
+      "category": "development",
+      "tags": ["stimulus", "hotwire", "rails", "html", "erb", "controllers"],
+      "author": { "name": "marcoroth" }
     },
     {
       "name": "solargraph",
+      "version": "1.0.0",
+      "source": "./solargraph",
       "description": "Solargraph for Claude Code — Ruby code intelligence, completion, and documentation",
-      "lspServers": {
-        "ruby": {
-          "command": "solargraph",
-          "args": ["stdio"],
-          "extensionToLanguage": {
-            ".rb": "ruby",
-            ".rake": "ruby",
-            ".gemspec": "ruby"
-          },
-          "transport": "stdio",
-          "initializationOptions": {},
-          "settings": {},
-          "startupTimeout": 60000,
-          "shutdownTimeout": 15000,
-          "maxRestarts": 3
-        }
-      }
+      "category": "development",
+      "tags": ["ruby", "lsp", "solargraph", "completion", "documentation", "intellisense"],
+      "author": { "name": "castwide" }
     }
   ]
 }
