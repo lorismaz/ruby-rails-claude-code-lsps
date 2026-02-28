@@ -2,7 +2,7 @@
   "name": "rubocop-lsp",
   "version": "1.0.0",
   "description": "RuboCop LSP for Claude Code — Ruby linting diagnostics and auto-correction",
-  "author": "rubocop",
+  "author": { "name": "rubocop" },
   "repository": "https://github.com/rubocop/rubocop",
   "license": "MIT",
   "keywords": ["ruby", "lsp", "rubocop", "linting", "diagnostics", "formatting"]
