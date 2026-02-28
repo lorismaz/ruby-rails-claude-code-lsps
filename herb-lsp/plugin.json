@@ -1,0 +1,9 @@
+{
+  "name": "herb-lsp",
+  "version": "1.0.0",
+  "description": "Herb Language Server for Claude Code — ERB template intelligence, diagnostics, and navigation",
+  "author": "marcoroth",
+  "repository": "https://github.com/marcoroth/herb",
+  "license": "MIT",
+  "keywords": ["erb", "html", "rails", "views", "templates", "herb"]
+}

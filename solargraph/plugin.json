@@ -1,0 +1,9 @@
+{
+  "name": "solargraph",
+  "version": "1.0.0",
+  "description": "Solargraph for Claude Code — Ruby code intelligence, completion, and documentation",
+  "author": "castwide",
+  "repository": "https://github.com/castwide/solargraph",
+  "license": "MIT",
+  "keywords": ["ruby", "lsp", "solargraph", "completion", "documentation", "intellisense"]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "stimulus-lsp",
+  "version": "1.0.0",
+  "description": "Stimulus LSP for Claude Code — Hotwire Stimulus controller intelligence for HTML and ERB",
+  "author": "marcoroth",
+  "repository": "https://github.com/marcoroth/stimulus-lsp",
+  "license": "MIT",
+  "keywords": ["stimulus", "hotwire", "rails", "html", "erb", "controllers"]
+}

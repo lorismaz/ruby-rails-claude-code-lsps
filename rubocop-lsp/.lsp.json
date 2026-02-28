@@ -1,0 +1,13 @@
+{
+  "ruby": {
+    "command": "rubocop",
+    "args": ["--lsp"],
+    "extensionToLanguage": {
+      ".rb": "ruby"
+    },
+    "transport": "stdio",
+    "initializationOptions": {},
+    "settings": {},
+    "maxRestarts": 3
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "ruby-lsp",
+  "version": "1.0.0",
+  "description": "Ruby LSP for Claude Code — code intelligence, diagnostics, and navigation for Ruby files",
+  "author": "Shopify",
+  "repository": "https://github.com/Shopify/ruby-lsp",
+  "license": "MIT",
+  "keywords": ["ruby", "lsp", "rails", "diagnostics", "navigation"]
+}

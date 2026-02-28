@@ -1,0 +1,13 @@
+{
+  "eruby": {
+    "command": "herb-language-server",
+    "args": ["--stdio"],
+    "extensionToLanguage": {
+      ".erb": "eruby"
+    },
+    "transport": "stdio",
+    "initializationOptions": {},
+    "settings": {},
+    "maxRestarts": 3
+  }
+}

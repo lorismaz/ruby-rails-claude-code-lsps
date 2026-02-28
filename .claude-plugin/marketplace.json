@@ -1,0 +1,102 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ruby-rails-claude-code-lsps",
+  "version": "1.0.0",
+  "description": "Ruby and Rails LSP servers for Claude Code",
+  "owner": {
+    "name": "lorismaz"
+  },
+  "plugins": [
+    {
+      "name": "ruby-lsp",
+      "description": "Ruby LSP for Claude Code — code intelligence, diagnostics, and navigation for Ruby files",
+      "lspServers": {
+        "ruby": {
+          "command": "ruby-lsp",
+          "args": [],
+          "extensionToLanguage": {
+            ".rb": "ruby",
+            ".rbw": "ruby",
+            ".rake": "ruby",
+            ".gemspec": "ruby"
+          },
+          "transport": "stdio",
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
+    },
+    {
+      "name": "herb-lsp",
+      "description": "Herb Language Server for Claude Code — ERB template intelligence, diagnostics, and navigation",
+      "lspServers": {
+        "eruby": {
+          "command": "herb-language-server",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".erb": "eruby"
+          },
+          "transport": "stdio",
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
+    },
+    {
+      "name": "rubocop-lsp",
+      "description": "RuboCop LSP for Claude Code — Ruby linting diagnostics and auto-correction",
+      "lspServers": {
+        "ruby": {
+          "command": "rubocop",
+          "args": ["--lsp"],
+          "extensionToLanguage": {
+            ".rb": "ruby"
+          },
+          "transport": "stdio",
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
+    },
+    {
+      "name": "stimulus-lsp",
+      "description": "Stimulus LSP for Claude Code — Hotwire Stimulus controller intelligence for HTML and ERB",
+      "lspServers": {
+        "html": {
+          "command": "stimulus-language-server",
+          "args": ["--stdio"],
+          "extensionToLanguage": {
+            ".html": "html",
+            ".erb": "html"
+          },
+          "transport": "stdio",
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
+    },
+    {
+      "name": "solargraph",
+      "description": "Solargraph for Claude Code — Ruby code intelligence, completion, and documentation",
+      "lspServers": {
+        "ruby": {
+          "command": "solargraph",
+          "args": ["stdio"],
+          "extensionToLanguage": {
+            ".rb": "ruby",
+            ".rake": "ruby",
+            ".gemspec": "ruby"
+          },
+          "transport": "stdio",
+          "initializationOptions": {},
+          "settings": {},
+          "maxRestarts": 3
+        }
+      }
+    }
+  ]
+}
