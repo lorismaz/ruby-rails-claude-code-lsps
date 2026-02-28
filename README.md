@@ -17,7 +17,7 @@ A curated collection of Ruby and Rails LSP servers packaged as [Claude Code](htt
 ### 1. Install the LSP server(s) you want
 
 ```bash
-# Ruby
+# Ruby (gems)
 gem install ruby-lsp
 gem install rubocop
 gem install solargraph
@@ -27,30 +27,33 @@ npm i -g @herb-tools/language-server
 npm i -g stimulus-language-server
 ```
 
-### 2. Enable plugins in Claude Code
+### 2. Add the marketplace to Claude Code
 
-Add the plugins you want to your Claude Code settings. You can configure them globally (`~/.claude/settings.json`) or per-project (`.claude/settings.json`):
+Open Claude Code and run `/plugins`, then select **Add Marketplace** and enter:
+
+```
+lorismaz/ruby-rails-claude-code-lsps
+```
+
+### 3. Enable plugins
+
+After adding the marketplace, select the plugins you want to enable from the list. Or add them manually to your settings (`~/.claude/settings.json` for global, `.claude/settings.json` for per-project):
 
 ```json
 {
-  "permissions": {
-    "allow": [
-      "mcp__*"
-    ]
-  },
-  "lspPlugins": {
-    "ruby-lsp@lorismaz/ruby-rails-claude-code-lsps": true,
-    "herb-lsp@lorismaz/ruby-rails-claude-code-lsps": true,
-    "rubocop-lsp@lorismaz/ruby-rails-claude-code-lsps": true,
-    "stimulus-lsp@lorismaz/ruby-rails-claude-code-lsps": true,
-    "solargraph@lorismaz/ruby-rails-claude-code-lsps": true
+  "enabledPlugins": {
+    "ruby-lsp@ruby-rails-claude-code-lsps": true,
+    "herb-lsp@ruby-rails-claude-code-lsps": true,
+    "rubocop-lsp@ruby-rails-claude-code-lsps": true,
+    "stimulus-lsp@ruby-rails-claude-code-lsps": true,
+    "solargraph@ruby-rails-claude-code-lsps": true
   }
 }
 ```
 
-### 3. Restart Claude Code
+### 4. Restart Claude Code
 
-After updating settings, restart Claude Code. The enabled LSP servers will start automatically when you work with matching file types.
+The enabled LSP servers will start automatically when you work with matching file types.
 
 ## What You Get
 
@@ -75,10 +78,10 @@ A good default setup for Rails projects:
 
 ```json
 {
-  "lspPlugins": {
-    "ruby-lsp@lorismaz/ruby-rails-claude-code-lsps": true,
-    "herb-lsp@lorismaz/ruby-rails-claude-code-lsps": true,
-    "stimulus-lsp@lorismaz/ruby-rails-claude-code-lsps": true
+  "enabledPlugins": {
+    "ruby-lsp@ruby-rails-claude-code-lsps": true,
+    "herb-lsp@ruby-rails-claude-code-lsps": true,
+    "stimulus-lsp@ruby-rails-claude-code-lsps": true
   }
 }
 ```
