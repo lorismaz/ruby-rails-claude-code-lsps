@@ -1,63 +1,66 @@
-# Ruby & Rails LSP Marketplace for Claude Code
+# Rails Claude Code Plugins
 
-A curated collection of Ruby and Rails LSP servers packaged as [Claude Code](https://docs.anthropic.com/en/docs/claude-code) plugins. Get full language intelligence — go-to-definition, diagnostics, completions, and more — for `.rb`, `.erb`, and `.html` files directly in Claude Code.
+A curated marketplace of Ruby and Rails plugins for [Claude Code](https://docs.anthropic.com/en/docs/claude-code). LSP servers, CLI tooling, and reactive UI patterns — everything you need for a productive Rails development experience.
 
 ## Included Plugins
 
-| Plugin | Description | Install prerequisite | File types |
-|--------|-------------|---------------------|------------|
-| **ruby-lsp** | Code intelligence, diagnostics, navigation | `gem install ruby-lsp` | `.rb`, `.rbw`, `.rake`, `.gemspec` |
-| **herb-lsp** | ERB template intelligence | `npm i -g @herb-tools/language-server` | `.erb` |
-| **rubocop-lsp** | Linting diagnostics and auto-correction | `gem install rubocop` | `.rb` |
-| **stimulus-lsp** | Hotwire Stimulus controller intelligence | `npm i -g stimulus-language-server` | `.html`, `.erb` |
-| **solargraph** | Code intelligence, completion, documentation | `gem install solargraph` | `.rb`, `.rake`, `.gemspec` |
+| # | Plugin | Type | Description |
+|---|--------|------|-------------|
+| 1 | **ruby-lsp** | LSP | Code intelligence, diagnostics, and navigation for Ruby files |
+| 2 | **herb-lsp** | LSP | ERB template intelligence, diagnostics, and navigation |
+| 3 | **rubocop-lsp** | LSP | Ruby linting diagnostics and auto-correction |
+| 4 | **stimulus-lsp** | LSP | Hotwire Stimulus controller intelligence for HTML and ERB |
+| 5 | **solargraph** | LSP | Ruby code intelligence, completion, and documentation |
+| 6 | **charm-ruby** | Skill + Commands + Agent | Build beautiful, interactive CLI tools in Ruby using the charm-ruby ecosystem |
+| 7 | **reactive-rails-ui** | Skill + Command + Agent | Turbo Morphing, View Transitions, and Stimulus optimistic UI patterns |
 
-## Usage
+## Installation
 
-### 1. Install the LSP server(s) you want
-
-```bash
-# Ruby (gems)
-gem install ruby-lsp
-gem install rubocop
-gem install solargraph
-
-# ERB / Stimulus (requires Node.js)
-npm i -g @herb-tools/language-server
-npm i -g stimulus-language-server
-```
-
-### 2. Add the marketplace to Claude Code
+### 1. Add the marketplace to Claude Code
 
 Open Claude Code and run `/plugins`, then select **Add Marketplace** and enter:
 
 ```
-lorismaz/ruby-rails-claude-code-lsps
+lorismaz/rails-claude-code-plugins
 ```
 
-### 3. Enable plugins
+### 2. Enable plugins
 
 After adding the marketplace, select the plugins you want to enable from the list. Or add them manually to your settings (`~/.claude/settings.json` for global, `.claude/settings.json` for per-project):
 
 ```json
 {
   "enabledPlugins": {
-    "ruby-lsp@ruby-rails-claude-code-lsps": true,
-    "herb-lsp@ruby-rails-claude-code-lsps": true,
-    "rubocop-lsp@ruby-rails-claude-code-lsps": true,
-    "stimulus-lsp@ruby-rails-claude-code-lsps": true,
-    "solargraph@ruby-rails-claude-code-lsps": true
+    "ruby-lsp@rails-claude-code-plugins": true,
+    "herb-lsp@rails-claude-code-plugins": true,
+    "rubocop-lsp@rails-claude-code-plugins": true,
+    "stimulus-lsp@rails-claude-code-plugins": true,
+    "solargraph@rails-claude-code-plugins": true,
+    "charm-ruby@rails-claude-code-plugins": true,
+    "reactive-rails-ui@rails-claude-code-plugins": true
   }
 }
 ```
 
-### 4. Restart Claude Code
+### 3. Restart Claude Code
 
-The enabled LSP servers will start automatically when you work with matching file types.
+The enabled plugins will be available immediately after restart.
 
-## What You Get
+---
 
-With these LSPs enabled, Claude Code gains access to:
+## LSP Servers
+
+Five language server integrations that give Claude Code full code intelligence for Ruby and Rails projects.
+
+| Plugin | Install prerequisite | File types |
+|--------|---------------------|------------|
+| **ruby-lsp** | `gem install ruby-lsp` | `.rb`, `.rbw`, `.rake`, `.gemspec` |
+| **herb-lsp** | `npm i -g @herb-tools/language-server` | `.erb` |
+| **rubocop-lsp** | `gem install rubocop` | `.rb` |
+| **stimulus-lsp** | `npm i -g stimulus-language-server` | `.html`, `.erb` |
+| **solargraph** | `gem install solargraph` | `.rb`, `.rake`, `.gemspec` |
+
+### What You Get
 
 - **Go to Definition** — jump to where a method, class, or variable is defined
 - **Find References** — find all usages of a symbol across your codebase
@@ -66,9 +69,7 @@ With these LSPs enabled, Claude Code gains access to:
 - **Document Symbols** — list all classes, methods, and constants in a file
 - **Workspace Symbols** — search for symbols across your entire project
 
-## Choosing Between ruby-lsp, solargraph, and rubocop-lsp
-
-These plugins serve different purposes and can be used together:
+### Choosing Between ruby-lsp, solargraph, and rubocop-lsp
 
 - **ruby-lsp** — Shopify's modern Ruby LSP. Best all-around choice for navigation and diagnostics.
 - **solargraph** — Excellent for documentation lookup and type inference via YARD annotations.
@@ -79,12 +80,69 @@ A good default setup for Rails projects:
 ```json
 {
   "enabledPlugins": {
-    "ruby-lsp@ruby-rails-claude-code-lsps": true,
-    "herb-lsp@ruby-rails-claude-code-lsps": true,
-    "stimulus-lsp@ruby-rails-claude-code-lsps": true
+    "ruby-lsp@rails-claude-code-plugins": true,
+    "herb-lsp@rails-claude-code-plugins": true,
+    "stimulus-lsp@rails-claude-code-plugins": true
   }
 }
 ```
+
+---
+
+## Charm Ruby — CLI Tooling
+
+Build beautiful, interactive command-line applications in Ruby using the [charm-ruby](https://charm-ruby.dev) ecosystem (Bubble Tea, Lipgloss, Bubbles, Huh, and more).
+
+### Skill
+
+The **charm-ruby-development** skill activates when you ask about building CLI tools in Ruby. It provides comprehensive knowledge of the Bubble Tea MVU architecture, Lipgloss styling, component integration, and gem distribution.
+
+### Commands
+
+| Command | Description |
+|---------|-------------|
+| `/charm:init [name]` | Scaffold a new charm-ruby CLI project |
+| `/charm:add-component [type]` | Add a Bubbles component to your project |
+| `/charm:package` | Prepare your CLI for RubyGems distribution |
+
+### Agent: CLI Architect
+
+Expert Ruby CLI architect that helps you design application architecture, plan multi-screen navigation, and select appropriate components.
+
+---
+
+## Reactive Rails UI
+
+Build smooth, reactive Rails UIs using three techniques that make standard redirect-based controllers feel as responsive as a SPA — with zero client-side state management:
+
+1. **Turbo Morphing** — diffs the DOM instead of replacing it, preserving scroll position and focus
+2. **View Transitions API** — browser-native crossfade animations between page states
+3. **Stimulus Optimistic UI** — instant visual feedback via aria-attribute toggling before the server responds
+
+Based on the patterns described in [Smooth UI Animations on Server-Rendered HTML](https://blog.siami.fr/smooth-ui-animations-on-server-rendered-html).
+
+### Skill
+
+The **reactive-rails-ui** skill activates when working on a Rails app and wanting SPA-like responsiveness. It provides the full technique reference, code examples, and a checklist for wiring up new resources.
+
+### Command
+
+| Command | Description |
+|---------|-------------|
+| `/scaffold-reactive-resource [Resource fields...]` | Scaffold a full reactive resource with Turbo Morphing, View Transitions, and optimistic UI |
+
+### Agent: Reactive UI Auditor
+
+Read-only auditor that checks an existing Rails app for correct reactive UI implementation — verifying morph declarations, dom_id usage, view transition names, Stimulus wiring, and controller redirect patterns.
+
+### Requirements
+
+- Rails 8+
+- Turbo (included in Rails by default)
+- Stimulus (included in Rails by default)
+- Tailwind CSS (for `group-aria-*` utility variants)
+
+---
 
 ## Upstream Projects
 
@@ -93,6 +151,8 @@ A good default setup for Rails projects:
 - [rubocop](https://github.com/rubocop/rubocop) by the RuboCop team
 - [stimulus-lsp](https://github.com/marcoroth/stimulus-lsp) by Marco Roth
 - [solargraph](https://github.com/castwide/solargraph) by Fred Snyder
+- [charm-ruby](https://charm-ruby.dev) by Marco Roth
+- [rails-hotwire-todo-app](https://github.com/Intrepidd/rails-hotwire-todo-app) by Loris Siami
 
 ## License
 

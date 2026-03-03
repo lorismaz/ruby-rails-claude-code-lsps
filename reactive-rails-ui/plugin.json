@@ -1,0 +1,6 @@
+{
+  "name": "reactive-rails-ui",
+  "version": "1.0.0",
+  "description": "Build smooth, reactive Rails UIs using Turbo Morphing, the View Transitions API, and Stimulus optimistic UI patterns",
+  "author": { "name": "Loris Siami" }
+}

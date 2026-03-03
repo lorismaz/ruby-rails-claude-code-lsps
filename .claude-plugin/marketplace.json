@@ -1,8 +1,8 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "ruby-rails-claude-code-lsps",
-  "version": "1.0.0",
-  "description": "Ruby and Rails LSP servers for Claude Code",
+  "name": "rails-claude-code-plugins",
+  "version": "1.1.0",
+  "description": "Ruby & Rails plugins for Claude Code — LSP servers, CLI tooling, and reactive UI patterns",
   "owner": {
     "name": "lorismaz"
   },
@@ -51,6 +51,24 @@
       "category": "development",
       "tags": ["ruby", "lsp", "solargraph", "completion", "documentation", "intellisense"],
       "author": { "name": "castwide" }
+    },
+    {
+      "name": "charm-ruby",
+      "version": "1.0.0",
+      "source": "./charm-ruby",
+      "description": "Build beautiful, interactive CLI tools in Ruby using the charm-ruby ecosystem (Bubble Tea, Lipgloss, Bubbles, Huh, and more)",
+      "category": "development",
+      "tags": ["ruby", "cli", "tui", "terminal", "charm", "bubbletea", "lipgloss"],
+      "author": { "name": "Loris Mazloum" }
+    },
+    {
+      "name": "reactive-rails-ui",
+      "version": "1.0.0",
+      "source": "./reactive-rails-ui",
+      "description": "Build smooth, reactive Rails UIs using Turbo Morphing, View Transitions, and Stimulus optimistic UI patterns",
+      "category": "development",
+      "tags": ["rails", "turbo", "stimulus", "hotwire", "view-transitions", "morphing", "optimistic-ui"],
+      "author": { "name": "Loris Siami" }
     }
   ]
 }
