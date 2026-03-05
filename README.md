@@ -101,7 +101,7 @@ The **charm-ruby-development** skill activates when you ask about building CLI t
 
 | Command | Description |
 |---------|-------------|
-| `/charm:init [name]` | Scaffold a new charm-ruby CLI project |
+| `/charm:new-cli [name]` | Scaffold a new charm-ruby CLI project |
 | `/charm:add-component [type]` | Add a Bubbles component to your project |
 | `/charm:package` | Prepare your CLI for RubyGems distribution |
 
